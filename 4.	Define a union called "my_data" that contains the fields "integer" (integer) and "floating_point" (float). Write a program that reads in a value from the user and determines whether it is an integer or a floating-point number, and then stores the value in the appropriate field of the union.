@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+union my_data {
+    int integer;
+    float floating_point;
+};
+
+int main() {
+    // Create a union
+    union my_data data;
+
+    // Read in a value from the user
+    printf("Enter a value: ");
+    if (scanf("%d", &data.integer) == 1) {
+        printf("You entered an integer: %d\n", data.integer);
+    } else if (scanf("%f", &data.floating_point) == 1) {
+        printf("You entered a floating-point number: %.2f\n", data.floating_point);
+    } else {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    return 0;
+}
