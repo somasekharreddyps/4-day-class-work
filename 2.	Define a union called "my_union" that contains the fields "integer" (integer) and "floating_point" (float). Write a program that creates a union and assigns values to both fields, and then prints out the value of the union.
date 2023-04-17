@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union my_union {
+    int integer;
+    float floating_point;
+};
+
+int main() {
+    // Create a union
+    union my_union u;
+
+    // Assign values to both fields
+    u.integer = 42;
+    u.floating_point = 3.14;
+
+    // Print the union value
+    printf("Union value: integer=%d, floating_point=%.2f\n", u.integer, u.floating_point);
+
+    return 0;
+}
