@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Define a structure called "rectangle"
+struct rectangle {
+    float width;
+    float height;
+};
+
+int main() {
+    // Create a rectangle object
+    struct rectangle my_rect;
+
+    // Prompt the user to enter the width and height
+    printf("Enter the width: ");
+    scanf("%f", &my_rect.width);
+
+    printf("Enter the height: ");
+    scanf("%f", &my_rect.height);
+
+    // Calculate the area of the rectangle
+    float area = my_rect.width * my_rect.height;
+
+    // Print out the area
+    printf("The area of the rectangle is %f\n", area);
+
+    return 0;
+}
